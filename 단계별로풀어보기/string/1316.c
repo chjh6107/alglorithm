@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 int main(){
-    int N, counter=0, alpCnt[26]={0,};
+    int N, i, alpCnt[26]={0,};
     char str[100];
     scanf("%s",str);
 
