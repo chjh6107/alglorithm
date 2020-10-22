@@ -21,15 +21,12 @@ double f(int lo, int hi, double *costArr){
 int main(){
     int C, N, L;
     double cost[1000]={0,};
-
     scanf("%d",&C);
-    
     for(int i = 0; i < C; i++){
         scanf("%d %d",&N, &L);
-        for(int j=0; j<N; j++){
+        for(int j=0; j<N; j++)
             scanf("%lf",&cost[j]);
-        }
-        printf("%lf\n",f(L,N,cost));
+        printf("%.10lf\n",f(L,N,cost));
     }
     return 0;
 }
