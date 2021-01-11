@@ -6,7 +6,7 @@ int main(int argc, char **argv) {
 	char comma = argc == 3 ? argv[2][0] : ' ';
 	int arrSize = 1, carry = 0;
 	int *number = (int *)malloc(sizeof(int)*arrSize);
-	number[0] = 1;
+	number[0] = 1; 
 
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < arrSize; j++) {
