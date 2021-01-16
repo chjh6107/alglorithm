@@ -3,13 +3,11 @@
 using namespace std;
 int n, arr[50001];
 int main(){
-	ios_base :: sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
+	ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
 
 	cin>>n;
 	for(int i=1;i<=n;i++){
-		for(int j=i;j<=n;j=j+i){
-			arr[j]++;
-		}
+		for(int j=i;j<=n;j=j+i) arr[j]++;
+		cout<<arr[i]<<" ";
 	}
-	for(int i=1;i<=n;i++) cout<<arr[i]<<" ";
 }
