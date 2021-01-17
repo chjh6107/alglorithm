@@ -11,5 +11,5 @@ int main() {
 		if (measure > m) max = ++cnt>max ? cnt : max;
 		else cnt = 0;
 	}
-	cout << max;
+	cout << (!max?-1:max);
 }
