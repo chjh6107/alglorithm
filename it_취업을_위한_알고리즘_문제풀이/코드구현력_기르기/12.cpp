@@ -1,4 +1,4 @@
-// 11. 숫자의 총 개수(large)
+// 12. 숫자의 총 개수(large)
 #include <iostream>
 using namespace std;
 
