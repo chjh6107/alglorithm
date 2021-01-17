@@ -1,6 +1,6 @@
 // 9. 모두의 약수
 #include <iostream>
-#include <vector>
+
 using namespace std;
 
 int main(){
