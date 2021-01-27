@@ -12,7 +12,6 @@ int main(){
             scanf("%d",&a[i][j]);
     
     scanf("%d %d",&tH, &tW);
-    // printf("%d\n",H-tH+1);
     for(int i=0;i<H-tH+1;i++){
         for(int j=0;j<W-tW+1;j++){
             acc=0;
