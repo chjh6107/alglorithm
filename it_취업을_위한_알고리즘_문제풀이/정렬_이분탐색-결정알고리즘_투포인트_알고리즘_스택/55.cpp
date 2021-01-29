@@ -8,7 +8,6 @@ int main(){
     int n,train, target=1;
     vector<char> v;
     stack<int> s;
-    // scanf("%d",&n);
     cin>>n;
 
     for(int i=0;i<n;i++){
