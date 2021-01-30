@@ -4,19 +4,19 @@
 using namespace std;
 int n,m,a[11], ch[11],acc=0;
 
-void cal(vector<int> A, int size, int L, int sum){
+void calDfs(vector<int> A, int size, int L, int sum){
     if(L>size){
         if(sum==m) acc++;
         return;
     }
-    cal(A,size,L+1,sum+A[L-1]);
-    cal(A,size,L+1,sum-A[L-1]);
+    calDfs(A,size,L+1,sum+A[L-1]);
+    calDfs(A,size,L+1,sum-A[L-1]);
 }
 void dfs(int L){
     if(L>n){
         vector<int> tmp;
         for(int i=1;i<=n;i++) if(ch[i]) tmp.push_back(a[i]);
-        cal(tmp, tmp.size(), 1, 0);        
+        calDfs(tmp, tmp.size(), 1, 0);        
         return;
     }
     ch[L]=1;
