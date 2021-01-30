@@ -3,6 +3,7 @@
 using namespace std;
 int n, ch[11]={0,}, a[11]={0,}, flag=0;
 void dfs(int L){
+    if(flag) return;
     if(L>n){
         int l=0,r=0;
         if(!flag){
