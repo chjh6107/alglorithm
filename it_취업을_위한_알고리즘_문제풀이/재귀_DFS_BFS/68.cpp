@@ -1,4 +1,4 @@
-// 68. 최소비용(DFS : 가중치 방향그래프 인접리스트)
+// 68. 최소비용(DFS : 가중치 방향그래프 인접리스트) STL pair
 #include <iostream>
 #include <vector>
 using namespace std;
