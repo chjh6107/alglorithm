@@ -4,7 +4,7 @@
 using namespace std;
 int S,E;
 int mv[3]={1,-1,5};
-int cnt[10001],ch[10001];
+int dist[10001],ch[10001];
 queue<int> Q;
 void bfs(){
     while(!Q.empty()){
@@ -18,7 +18,7 @@ void bfs(){
             if(!ch[pos]){
                 ch[pos]=1;
                 Q.push(mv[i]+curr);
-                cnt[pos]+=cnt[curr]+1;
+                dist[pos]+=dist[curr]+1;
             }
         }
     }
@@ -27,5 +27,5 @@ int main(){
     cin>>S>>E;
     Q.push(S);
     bfs();
-    cout<<cnt[E];
+    cout<<dist[E];
 }
