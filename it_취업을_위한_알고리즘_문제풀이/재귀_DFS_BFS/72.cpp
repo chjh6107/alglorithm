@@ -4,17 +4,15 @@
 using namespace std;
 int main(){
     queue<int> Q;
-    int N,K,cnt=1,res;
+    int N,K;
     cin>>N>>K;
     for(int i=1;i<=N;i++) Q.push(i);
     while(!Q.empty()){
-        if(cnt!=K){
-            res = Q.front();
+        for(int i=1;i<K;i++){
             Q.push(Q.front());
+            Q.pop();
         }
         Q.pop();
-        cnt++;
-        if(cnt>K)cnt=1;
+        if(Q.size()==1)cout<<Q.front();
     }
-    cout<<res;
 }
