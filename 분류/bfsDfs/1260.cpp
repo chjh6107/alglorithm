@@ -33,7 +33,7 @@ void BFS(){
 int main(){
     int M,V,a,b;
     cin>>N>>M>>V;
-    for(int i=1;i<=M;i++){
+    while(M--){
         cin>>a>>b;
         vec[a].push_back(b);
         vec[b].push_back(a);
