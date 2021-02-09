@@ -9,7 +9,7 @@ int mv[]={-1,1};
 int n,k;
 void bfs(){
     Q.push({n,0});
-    visit[n];
+    visit[n]=1;
     while(!Q.empty()){
         int v=Q.front().first;
         int time=Q.front().second;
