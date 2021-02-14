@@ -7,6 +7,6 @@ ll fact(ll x){mem[x]= x>1?x*fact(x-1):1;}
 int main(){
     int N,R;
     cin>>N>>R;
-    fact(20);
+    fact(20); 
     cout<<mem[N]/(mem[N-R]*mem[R]);
 }
