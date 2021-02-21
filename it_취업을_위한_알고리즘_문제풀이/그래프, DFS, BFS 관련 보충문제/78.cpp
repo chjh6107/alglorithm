@@ -16,7 +16,7 @@ struct Edge{
 
 int Find(int v){
     return v==unf[v]?v:unf[v]=Find(unf[v]);
-}
+} 
 int Union(int a, int b){
     a=Find(a);
     b=Find(b);
