@@ -15,9 +15,9 @@ struct Edge{
 vector<pair<int,int>> graph[21];
 vector<int> dist(21,INF);
 priority_queue<Edge>pq;
-void dijkstra(){
-    pq.push(Edge(1,0));
-    dist[1]=0;
+void dijkstra(int start){
+    pq.push(Edge(start,0));
+    dist[start]=0;
     while(!pq.empty()){
         int now=pq.top().vex;
         int cost=pq.top().dis;
@@ -41,7 +41,7 @@ int main(){
         cin>>a>>b>>c;
         graph[a].push_back({b,c});
     }
-    dijkstra();
+    dijkstra(1);
     for(int i=2;i<=n;i++){
         if(dist[i]!=INF)cout<<i<<" : "<<dist[i]<<"\n";
         else cout<<i<<" : impossible"<<"\n";
