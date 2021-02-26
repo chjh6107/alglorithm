@@ -9,6 +9,7 @@ vector<char> v;
 int visit[16];
 string vowels="aeiou";
 void D(int len,int start,int cons, int vowel){
+    flag=0;
     if(len==L){
         if(cons<2||vowel<1)return;
         for(int i=0;i<C;i++)
@@ -17,7 +18,6 @@ void D(int len,int start,int cons, int vowel){
         cout<<"\n";
         return;
     }
-    flag=0;
     for(int i=start;i<C;i++){
         if(!visit[i]){
             visit[i]=1;
@@ -27,10 +27,8 @@ void D(int len,int start,int cons, int vowel){
                     break;
                 }
             }
-            if(flag){
-                D(len+1,i+1,cons,vowel+1);
-                flag=0;
-            }else D(len+1,i+1,cons+1,vowel);
+            if(flag)D(len+1,i+1,cons,vowel+1);
+            else D(len+1,i+1,cons+1,vowel);
             visit[i]=0;
         }
     }
