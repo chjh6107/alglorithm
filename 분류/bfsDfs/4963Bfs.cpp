@@ -5,7 +5,7 @@
 #include <queue>
 using namespace std;
 queue<pair<int,int>>Q;
-int graph[50][50],visit[50][50];
+int map[50][50],visit[50][50];
 int dx[8]={1,1,0,-1,-1,-1,0,1},dy[8]={0,1,1,1,0,-1,-1,-1};
 int w,h;
 void bfs(){
@@ -17,7 +17,7 @@ void bfs(){
             int nextY=y+dy[i];
             int nextX=x+dx[i];
             if(nextX<0||nextY<0||nextX>=w||nextY>=h)continue;
-            if(graph[nextY][nextX]&&!visit[nextY][nextX]){
+            if(map[nextY][nextX]&&!visit[nextY][nextX]){
                 Q.push({nextY,nextX});
                 visit[nextY][nextX]=1;
             }
@@ -32,12 +32,12 @@ int main(){
         if(!w&&!h)break;
         for(int i=0;i<h;i++){
             for(int j=0;j<w;j++){
-                cin>>graph[i][j];
+                cin>>map[i][j];
             }
         }
         for(int i=0;i<h;i++){
             for(int j=0;j<w;j++){
-                if(!visit[i][j]&&graph[i][j]){
+                if(!visit[i][j]&&map[i][j]){
                     Q.push({i,j});
                     visit[i][j]=1;
                     bfs();
