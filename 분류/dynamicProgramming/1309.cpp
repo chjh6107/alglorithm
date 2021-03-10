@@ -1,4 +1,5 @@
 // 동물원
+// 다이나믹 프로그래밍
 #include <iostream>
 int D[100001]={1,3};
 int main(){
