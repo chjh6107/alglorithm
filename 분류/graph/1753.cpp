@@ -10,7 +10,7 @@ struct Edge{
     int ver;
     int dist;
     Edge(int a,int b):ver(a),dist(b){};
-    bool operator<(const Edge e)const{return dist>e.dist;}
+    bool operator<(const Edge &e)const{return dist>e.dist;}
 };
 priority_queue<Edge>q;
 vector<pair<int,int>>g[MAX];
