@@ -7,8 +7,6 @@ int a[11];
 int op[4];
 int Min=2147000000, Max=0;
 void dfs(int L,int val){
-    // cout<<val<<"\n";
-    cout<<opCnt<<" "<<L<<"\n";
     if(N==L){
         if(Max<val)Max=val;
         if(Min>val)Min=val;
@@ -45,5 +43,5 @@ int main(){
         opCnt+=op[i];
     }
     dfs(1,a[0]);
-    cout<<Min<<" "<<Max<<"\n";
+    cout<<Max<<"\n"<<Min;
 }
