@@ -27,7 +27,7 @@ void bfs(int m,int n,int &tomato, int &d){
             if(ny<0||nx<0||ny>=n||nx>=m) continue;
             if(!box[ny][nx]){
                 box[ny][nx]=1;
-                tomato++;
+                tomato--;
                 spend[ny][nx]=spend[y][x]+1;
                 q.push({ny,nx});
             }
@@ -46,11 +46,5 @@ int main(){
         }
     }
     bfs(M,N,tomato,day);
-    for(int i=0;i<N;i++){
-        for(int j=0;j<M;j++){
-            cout<<spend[i][j]<<" ";
-        }
-        cout<<endl;
-    }
-    cout<<day;
+    cout<<(tomato?-1:day);
 }
