@@ -10,5 +10,5 @@ int main(){
     int N;
     std::cin>>N;
     dfs(N);
-    std::cout<<dp[N];
+    std::cout<<dfs(N);
 }
