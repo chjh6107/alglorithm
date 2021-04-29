@@ -1,9 +1,9 @@
 // 색종이
+// 구현
 #include<iostream>
 using namespace std;
 int a[100][100];
 int main(){
-    freopen("input.txt","r",stdin);
     int n,x,y,cnt=0;
     cin>>n;
     while(n--){
