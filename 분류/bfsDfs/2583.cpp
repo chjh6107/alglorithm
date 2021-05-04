@@ -28,7 +28,6 @@ int bfs(){
 }
 int main(){
     int x1,x2,y1,y2,cnt=0,area[100];
-    freopen("input.txt","r",stdin);
     cin>>M>>N>>K;
     while(K--){
         cin>>x1>>y1>>x2>>y2;
