@@ -2,12 +2,12 @@
 #include<iostream>
 int dp[46];
 int dfs(int n){
-    if(dp[n]) return dp[n];
-    if(n==1||n==2)return n;
+	if(dp[n])return dp[n];
+	if(n<3)return dp[n]=n;
     return dp[n]=dfs(n-1)+dfs(n-2);
 }
 int main(){
-    int N;
-    std::cin>>N;
-    std::cout<<dfs(N);
+	int n;
+	std::cin>>n;
+	std::cout<<dfs(n);
 }
